@@ -1,0 +1,20 @@
+.Display{
+  width: fit-content;
+  margin: auto;
+  margin-top: 7em;
+
+  &Title, &Value{
+    margin: 0;
+    color: #041836;
+  }
+
+  &Title{
+    margin-top: -1em;
+    text-align: center;
+  }
+
+  &Value{
+    font-size: 12em;
+    height: fit-content;
+  }
+}
