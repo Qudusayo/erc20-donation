@@ -25,12 +25,9 @@ contract LinkDonation {
 
     function addPay(uint256 amount) public payable {
         IERC20 tokenContract = IERC20(tokenContractAddress);
+        require(amount >= 1 ether, "Kindly donate at least one LINK");
         require(
-            tokenContract.transferFrom(
-                msg.sender,
-                address(this),
-                amount * 1 ether
-            ),
+            tokenContract.transferFrom(msg.sender, address(this), amount),
             "Deposit Failed"
         );
         donated += amount;
